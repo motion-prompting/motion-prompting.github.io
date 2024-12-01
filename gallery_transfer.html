@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A video model conditioned on any motion.">
+  <meta name="keywords" content="Video Generation, Motion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motion Prompting: Controlling Video Generation with Motion Trajectories</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- TODO -->
+  <!--<link rel="icon" href="./static/images/favicon.svg">-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Motion Prompting: Controlling Video Generation with Motion Trajectories</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interacting with Images -->
+<section class="section" style="padding-top: 0;">
+  <div class="container is-max-desktop">
+
+    <!-- Back to Main Page Button -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <a href="index.html" class="button is-secondary">Back to Main Page</a>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Gallery: Motion Transfer</h2>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified" style="padding: 1rem 0;">
+          <p>
+            Here we show more <i>Motion Transfer</i> results in addition to
+            the ones from the <a href="index.html#transfer">main page</a>. 
+            We focus primarily on out-of-domain image and motion combinations.
+            Note that some videos, in particular the ones with leaves or sand, are of 
+            slightly lower quality due to video compression. We provide results
+            using the motion of
+            <a href="#monkey">a monkey</a>, 
+            <a href="#camel">a camel</a>, 
+            <a href="#clouds">clouds</a>, 
+            <a href="#jello">jello</a>, and
+            <a href="#waterfall">a waterfall</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-title -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="monkey" style="margin-top: 2rem;">Monkey</h2>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/monkey_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/monkey_3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/monkey_4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/monkey_5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Sub-title -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="camel" style="margin-top: 2rem;">Camel</h2>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/camel_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/camel_3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/camel_4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/camel_5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/camel_6.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Sub-title -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="clouds" style="margin-top: 2rem;">Clouds</h2>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/clouds_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/clouds_3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/clouds_4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/clouds_5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/clouds_6.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Sub-title -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="jello" style="margin-top: 2rem;">Jello</h2>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified" style="padding: 0;">
+          <p>
+            In the source video a finger taps the jello. As a result,
+            the tracks in the upper right are occluded briefly.
+            Interestingly, our model has learned about occlusions and 
+            in most cases will generate something that accounts for the 
+            observed occlusions, such as leaves, clouds, or some distortion.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/jello_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/jello_3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/jello_4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/jello_5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Sub-title -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="waterfall" style="margin-top: 2rem;">Waterfall</h2>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/waterfall_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/waterfall_3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/waterfall_4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/waterfall_5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/transfer/more/waterfall_6.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Back to Main Page Button -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <a href="index.html" class="button is-secondary">Back to Main Page</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

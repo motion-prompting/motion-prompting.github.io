@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A video model conditioned on any motion.">
+  <meta name="keywords" content="Video Generation, Motion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motion Prompting: Controlling Video Generation with Motion Trajectories</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- TODO -->
+  <!--<link rel="icon" href="./static/images/favicon.svg">-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Motion Prompting: Controlling Video Generation with Motion Trajectories</h1>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interacting with Images -->
+<section class="section" style="padding-top: 0;">
+  <div class="container is-max-desktop">
+
+    <!-- Back to Main Page Button -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <a href="index.html" class="button is-secondary">Back to Main Page</a>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="">Gallery: Interacting with Images</h2>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified" style="padding: 1rem 0;">
+          <p>
+            Here we show more "Interacting with Images" examples.
+            Please note that, <u style="color: red;"><i><b style="color: red;">these
+            results are neither real-time nor causal</b></i></u>. Please see
+            <a href="index.html">the main page</a> for more information and context.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/bear.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a brown bear"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/smoke3.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"smoke"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/elephant.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a majestic elephant"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/sheep2.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"sheep"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/globe.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up shot of a globe"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/horse.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a horse"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/smoke5.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"smoke"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/parrot2.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up of an orange parrot"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/rabbit.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up of a rabbit"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/redpanda.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a red panda"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/sailboat.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a white sailboat on the ocean"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/sheep.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up of a sheep"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/smoke4.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"smoke"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/fish.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a goldfish swimming against a dark background"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/skull.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a white skull on a black background"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/elephant2.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"an elephant"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/americangothic.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"american gothic"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/smoke2.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"smoke"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/water.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"water splash captured mid-motion against a warm sunset backdrop with droplets in the air"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/interact/more/raccoon.mp4" type="video/mp4">
+          </video>
+          <p><span class="text-prompt">"a racoon"</span> <span style="font-size: 0.7rem;">(typo is actual prompt, oops...)</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Main Page Button -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <a href="index.html" class="button is-secondary">Back to Main Page</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

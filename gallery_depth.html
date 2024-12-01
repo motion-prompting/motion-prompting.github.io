@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A video model conditioned on any motion.">
+  <meta name="keywords" content="Video Generation, Motion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motion Prompting: Controlling Video Generation with Motion Trajectories</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- TODO -->
+  <!--<link rel="icon" href="./static/images/favicon.svg">-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Motion Prompting: Controlling Video Generation with Motion Trajectories</h1>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container is-max-desktop">
+
+    <!-- Back to Main Page Button -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <a href="index.html" class="button is-secondary">Back to Main Page</a>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="">Gallery: Camera Control with Depth</h2>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified" style="padding: 1rem 0;">
+          <p>
+            Below we show more examples of camera control through motion prompting,
+            including examples of <a href="#circles">circular motions</a>,
+            <a href="#arcs">arcing motions</a>, and
+            <a href="#dolly">dolly zooms</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-title Circles -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="circles">Circles</h2>
+      </div>
+    </div>
+
+    <!-- Circles Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/lake.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"rowboats on a placid aquamarine lake nestled in the swiss mountains"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/mushing.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"huskies in the alaskan tundra, under the northern lights"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/rabbit.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up of a rabbit"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/squirrel.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a squirrel sitting on the ground in the woods"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/teapot.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a warm, intimate close up of a ceramic teapot, a textured mug of tea, and a closed notebook on a wooden table."</p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/arches.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"arches in arches national park, with shrubbery in the foreground and a bright blue sky"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/cat.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a beautiful grey tabby kitten"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/rose.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a red rose"</p>
+        </div>
+      </div>
+      
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/sheep.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up of two sheep side by side in a grassy field"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/tulips.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up shot of yellow tulips"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_circle/waterfalls.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a waterfall on a rocky cliff in a lush green rainforest"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-title Arcing -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="arcs">Arcs</h2>
+      </div>
+    </div>
+
+    <!-- Arcing Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_arc/arches.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"arches in arches national park, with shrubbery in the foreground and a bright blue sky"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_arc/cat.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a beautiful grey tabby kitten"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_arc/globe.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up shot of a globe"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_arc/skull.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a skull on a dark table against a black background"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_arc/squirrel.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a squirrel sitting on the ground in the woods"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_arc/teddy.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up of a cute brown teddy bear with an orange scarf"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_arc/tulips.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up shot of yellow tulips"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-title Dolly -->
+    <div class="columns is-centered has-text-centered" style="padding-top: 1rem;">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="dolly">Dolly Zooms</h2>
+      </div>
+    </div>
+
+    <!-- Arcing Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/monkey.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up of a snow monkey in a Japanese hot spring"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/sheep2.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up of a sheep"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/man.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a young man in a maroon fleece stands indoors against a blurred glass background."</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/waterfalls.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"waterfalls in a lush green forest, seen from a rocky shore"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/rhino.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up of a rhinoceros"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/rose.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a red rose"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/cat.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a beautiful grey tabby kitten"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/woman.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a woman in front of a whiteboard"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/teapot.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a warm, intimate close up of a ceramic teapot, a textured mug of tea, and a closed notebook on a wooden table."</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/arches.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"arches in arches national park, with shrubbery in the foreground and a bright blue sky"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/tulips.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a close up shot of yellow tulips"</p>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline>
+            <source src="./static/videos/depth/more_dolly/waterfalls2.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a waterfall on a rocky cliff in a lush green rainforest"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Main Page Button -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <a href="index.html" class="button is-secondary">Back to Main Page</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
