@@ -433,6 +433,850 @@
 </section>
 
 
+<!-- Depth -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="depth">Camera Control from Depth</h2>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4" style="padding-top: 1rem;">
+      <div class="column is-full">
+        <div class="has-text-centered rounded-border-video">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/depth_viz_fade.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            Beyond single drags, we can also design motion prompts to achieve camera control.
+            We do this by first running a monocular depth estimator 
+            <a id="ref12back" href="#ref12">[12]</a> to get a point cloud, and then
+            projecting points on to a user-provided sequence of cameras, defining the
+            desired camera trajectory.
+          </p>
+          <p>
+            By doing this, we can move the camera in <a href="#camera_arcs">arcs</a> or 
+            <a href="#camera_circles">circles</a>, with <a href="#camera_mouse">user mouse control</a>,
+            or even get <a href="#camera_dolly">dolly zooms</a> by changing the camera focal length.
+            Note that we never train our model on posed data — this camera control capability 
+            simply falls out of training a model to be conditioned on tracks.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dolly Zoom Videos -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4" id="camera_dolly">Dolly Zooms</h3>
+      </div>
+    </div>
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/camera_dolly.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Arcing Videos -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4" id="camera_arcs">Arcing</h3>
+      </div>
+    </div>
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/camera_arcs.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Circle Videos -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4" id="camera_circles">Circles</h3>
+      </div>
+    </div>
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/camera_circles.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mouse Depth Videos -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4" id="camera_mouse">Mouse Controlled</h3>
+      </div>
+    </div>
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/camera_mouse.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button to Gallery -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <a href="gallery_depth.html" class="see-more-button button is-secondary" target="_blank">
+          See more examples
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Primitives -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="primitives">Object Control with Geometric Primitives</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            We can also reinterpret mouse motions as manipulating a geometric primitive, such as a sphere. 
+            By placing these tracks over an object that can be roughly approximated by the primitive, 
+            we can get a motion prompt with more fine-grained control over the object than with sparse mouse tracks alone.
+            Again, <u style="color: red;"><i><b style="color: red;">the 
+            results below are neither real-time nor causal</b></i></u> (<a href="#caveat">see above</a>).
+          </p>
+
+          <p style="margin-top: 1rem;">
+            In the bottom row we show a funny example of what might happen 
+            if you don't use a spherical primitive.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/primitives.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Compositions -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="compositions">Object and Camera Control by Composition</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            We can also create motion prompts that result in simultaneous object and camera motion.
+            To do this, we compose a camera control motion prompt with an object control motion prompt
+            by adding the two tracks together. Technically, this is an approximation but is good enough 
+            for camera trajectories that are not too extreme. Below we show examples of back and forth camera
+            motion composed with head turns.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/composition.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Motion Transfer -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="transfer">Motion Transfer</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            Some motions are hard to create. In these cases, we can transfer a desired motion
+            from a source video to a first frame. For example, below we puppeteer a <i>monkey</i>
+            and a <i>skull</i> with a <i>moving face</i> and transfer the 
+            <i>spinning of the Earth</i> to a <i>cat</i> and a <i>dog</i>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/transfer.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p style="margin-top: 1rem;">
+            Surprisingly, we find that our model can transfer motion even when applying extremely out of domain
+            motions to images. For example, we can take the motion of a <i>monkey chewing on a banana</i> and apply it 
+            to a <i>bird's eye photo of trees</i>, and a <i>brick wall</i>. In order to do this, we find that we need
+            quite dense tracks — we use 1500, but only visualize a subset below so that the source video is still visible.
+          </p>
+          <p>
+            The resulting videos exhibit an interesting effect in which pausing the video on any frame 
+            removes the percept of the source video. That is, the <i>monkey</i> can only be 
+            perceived when the video is playing, where a Gestalt common-fate effect occurs. This is related to 
+            <a href="https://www.youtube.com/watch?v=1F5ICP9SYLU" target="_blank"> classic work</a>
+            on motion perception
+            <a id="ref13back" href="#ref13">[13]</a>, and a similar effect
+            can be seen <a href="https://www.reddit.com/r/StableDiffusion/comments/17b4dfc/my_first_try_with_video/" target="_blank">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/transfer_ood.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button to Gallery -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <a href="gallery_transfer.html" class="see-more-button button is-secondary" target="_blank">
+          See more examples
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Drag Based Image Editing -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="drag_edit">Drag Based Image Editing</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            There is a line of work that enables drag-based editing of images
+            <a id="ref14back" href="#ref14">[14]</a>
+            <a id="ref15back" href="#ref15">[15]</a>
+            <a id="ref16back" href="#ref16">[16]</a>
+            <a id="ref17back" href="#ref17">[17]</a>
+            <a id="ref18back" href="#ref18">[18]</a>
+            <a id="ref25back" href="#ref25">[25]</a>.
+            We can also achieve a similar effect by conditioning our model
+            on these drags. The set up is identical to the <a href="#interacting">"Interacting with an Image"</a>
+            examples above. Similar to the insight from
+            <a id="ref18back" href="#ref18">[18]</a>
+            <a id="ref25back" href="#ref25">[25]</a>, the benefit 
+            of using a video model is that we inherit a powerful video prior. Prior
+            works also propose "edit-masks," which we can achieve by adding static 
+            tracks to the conditioning, as shown on the far right.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-fourth" style="padding-left: 0; padding-right 0;">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline style="border: 2px solid #000; border-radius: 8px;">
+            <source src="./static/videos/drag/drag_skull.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a white skull on a black background"</p>
+        </div>
+      </div>
+      <div class="column is-fourth" style="padding-left: 0; padding-right 0;">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline style="border: 2px solid #000; border-radius: 8px;">
+            <source src="./static/videos/drag/drag_ottoman.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt">"a living room"</p>
+        </div>
+      </div>
+      <div class="column is-fourth" style="padding-left: 0; padding-right 0;">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline style="border: 2px solid #000; border-radius: 8px;">
+            <source src="./static/videos/drag/drag_balloon.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt" style="font-size: 0.8rem;">"a serene scene of multiple hot air balloons floating over Cappadocia, Turkey, during sunset"</p>
+        </div>
+      </div>
+      <div class="column is-fourth" style="padding-left: 0; padding-right 0;">
+        <div class="has-text-centered">
+          <video poster="" autoplay muted loop playsinline style="border: 2px solid #000; border-radius: 8px;">
+            <source src="./static/videos/drag/drag_balloon_masked_with_translucent_area.mp4" type="video/mp4">
+          </video>
+          <p class="text-prompt" style="font-size: 0.8rem;">"a serene scene of multiple hot air balloons floating over Cappadocia, Turkey, during sunset"</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Motion Magnification -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="motionmag">Motion Magnification</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            Another application our model is motion magnification
+            <a id="ref22back" href="#ref22">[22]</a>
+            <a id="ref23back" href="#ref23">[23]</a>
+            <a id="ref24back" href="#ref24">[24]</a>. This task involves taking
+            a video with subtle motions and generating a new video in which
+            these motions have been magnified, so that they are easier to see.
+            We do this by running a tracking algorithm on an input video, 
+            smoothing and magnifying the resulting tracks, 
+            and then feeding the first frame of 
+            the input video and magnified tracks to our model.
+            Below, we show examples in which subtle breathing motion
+            has been magnified.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/motionmag.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Failures -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Failures</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            Sometimes, motion prompts will have surprising and undesired
+            effects. This often happens when the constructed motion 
+            prompt underspecifies the desired behavior. For example, with the 
+            <b>snow monkey</b> we want to arc the camera so that it is
+            above the scene. However, the model attributes part of that motion
+            to the monkey itself, resulting in it looking face-down into the water.
+            In other cases, we get failures when not constructing the motion prompts
+            carefully enough. In the <b>cow</b> example we inadverdently pin the 
+            horns of the cow to the background. And sometimes, there is just 
+            inherent ambiguity in motion, as with the <b>van Gogh</b> example.
+          </p>
+          <p>
+            Failures can also illuminate limitations of the underlying video model.
+            In the <b>chess</b> example, we see the model spontaneously conjuring 
+            a pawn from thin air. A clearly unphysical behavior. And in the 
+            <b>lion</b> example we see that the model apparently 
+            does not know how a lion should move. These examples suggest that 
+            motion prompts might be used to probe the capabilities and limitations 
+            of video models.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/failures.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Different Text Prompts -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Effect of Text Prompts</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            Throughout this webpage
+            we use text prompts that describe the image but not 
+            the desired motion, so as to factor out the influence of text 
+            on the motion as much as possible. We also try to keep the 
+            text prompts simple.
+
+            Here we show the effect of gradually more complex text prompts. For the most part,
+            empirically we find that the text prompt does not have a
+            significant effect on the motion. Sometimes, prompting
+            for a specific result has unintended consequences such as 
+            the pine tree example on the far right.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/text_sweep.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Sparsity Sweep -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Effect of Track Sparsity</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            Track density is a knob that we allow users to tune themselves.
+            Here we show the effect of track density on video generation for 
+            a motion prompt with the intended effect of arcing the camera above 
+            the scene. As can be seen, for low density tracks the motion is
+            underspecified. For higher density tracks this motion is more
+            precisely determined, but at the expense of giving the model 
+            constraints that are too strict. Often, there is a happy middle 
+            ground in which we can achieve the desired motion while keeping 
+            emergent dynamics from the underlying video prior.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-full">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/sparsity.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Comparisons -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparisons</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            Here we show comparisons between our method, Image Conductor, and DragAnything,
+            with the input motion visualized as a moving red dot.
+            These are exactly the videos that participants in our human study were shown.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+      <div class="column is-full" style="padding: 0;">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/comparison.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Uncurated Samples -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="uncurated">Uncurated Samples and Cherry Picking</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            All videos shown so far have been cherry picked from four samples. Below we 
+            show the uncurated, randomly sampled videos. These are exactly the set of
+            videos from which we cherrypick. Note however that there is also implicit bias in how 
+            we chose the inputs. For example, we found that our video model performs
+            relatively well on animals, and as such we ended up focusing more on those kinds of inputs.
+          </p>
+          <p style="font-size: 0.85rem; padding: 0 20px;" id="causal">
+            Aside: The sand video on the far right is a good example of how our model is not causal.
+            The sand in the upper left corner begins to move before the mouse
+            cursor even gets there. It anticipates that the mouse will move the sand there 
+            because the model gets the full motion while generating the entire video.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div class="columns is-multiline is-variable is-4">
+
+      <div class="column is-full flush">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/uncurated_0.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full flush">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/uncurated_1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-full flush">
+        <div class="has-text-centered">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/concat/uncurated_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Related Work -->
+<!--
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Work</h2>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<!-- References -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">References</h2>
+      </div>
+    </div>
+    
+    <!-- Description -->
+    <div class="columns is-centered" style="font-size: 0.8rem;">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p id="ref1" style="margin-bottom: 0;">
+            [1] Wang et al., "<a href="https://wzhouxiff.github.io/projects/MotionCtrl/" target="_blank">
+              MotionCtrl: A Unified and Flexible Motion Controller for Video Generation</a>", SIGGRAPH 2024.
+            <a href="#ref1back">↩</a>
+          </p>
+          <p id="ref2" style="margin-bottom: 0;">
+            [2] Yin et al., "<a href="https://www.microsoft.com/en-us/research/project/dragnuwa/" target="_blank">
+              DragNUWA: Fine-grained Control in Video Generation by Integrating Text, Image, and Trajectory</a>", arXiv, 2023.
+            <a href="#ref2back">↩</a>
+          </p>
+          <p id="ref3" style="margin-bottom: 0;">
+            [3] Chen et al., "<a href="https://tsaishien-chen.github.io/MCDiff/" target="_blank">
+              Motion-Conditioned Diffusion Model for Controllable Video Synthesis</a>", arXiv, 2023.
+            <a href="#ref3back">↩</a>
+          </p>
+          <p id="ref4" style="margin-bottom: 0;">
+            [4] Li et al., "<a href="https://liyaowei-stu.github.io/project/ImageConductor/" target="_blank">
+              Image Conductor: Precision Control for Interactive Video Synthesis</a>", arXiv, 2024.
+            <a href="#ref4back">↩</a>
+          </p>
+          <p id="ref5" style="margin-bottom: 0;">
+            [5] Wu et al., "<a href="https://weijiawu.github.io/draganything_page/" target="_blank">
+              DragAnything: Motion Control for Anything using Entity Representation</a>", ECCV 2024.
+            <a href="#ref5back">↩</a>
+          </p>
+          <p id="ref6" style="margin-bottom: 0;">
+            [6] Niu et al., "<a href="https://myniuuu.github.io/MOFA_Video/" target="_blank">
+              MOFA-Video: Controllable Image Animation via Generative Motion Field Adaptions in Frozen Image-to-Video Diffusion Model</a>", ECCV 2024.
+            <a href="#ref6back">↩</a>
+          </p>
+          <p id="ref7" style="margin-bottom: 0;">
+            [7] Wang et al., "<a href="https://videocomposer.github.io/" target="_blank">
+              VideoComposer: Compositional Video Synthesis with Motion Controllability</a>", arXiv, 2023.
+            <a href="#ref7back">↩</a>
+          </p>
+          <p id="ref8" style="margin-bottom: 0;">
+            [8] Shi et al., "<a href="https://xiaoyushi97.github.io/Motion-I2V/" target="_blank">
+              Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling</a>", SIGGRAPH 2024.
+            <a href="#ref8back">↩</a>
+          </p>
+          <p id="ref9" style="margin-bottom: 0;">
+            [9] Zhang et al., "<a href="https://ali-videoai.github.io/tora_video/" target="_blank">
+              Tora: Trajectory-oriented Diffusion Transformer for Video Generation</a>", arXiv, 2024.
+            <a href="#ref9back">↩</a>
+          </p>
+          <p id="ref10" style="margin-bottom: 0;">
+            [10] Zhou et al., "<a href="https://zhtjtcz.github.io/TrackGo-Page/" target="_blank">
+              TrackGo: A Flexible and Efficient Method for Controllable Video Generation</a>", arXiv, 2024.
+            <a href="#ref10back">↩</a>
+          </p>
+          <p id="ref11" style="margin-bottom: 0;">
+            [11] Lei et al., "<a href="https://yu-shaonian.github.io/Animate_Anything/" target="_blank">
+              AnimateAnything: Consistent and Controllable Animation for video generation</a>", arXiv, 2024.
+            <a href="#ref11back">↩</a>
+          </p>
+          <p id="ref12" style="margin-bottom: 0;">
+            [12] Piccinelli et al., "<a href="https://github.com/lpiccinelli-eth/UniDepth" target="_blank">
+              UniDepth: Universal Monocular Metric Depth Estimation</a>", CVPR 2024.
+            <a href="#ref12back">↩</a>
+          </p>
+          <p id="ref13" style="margin-bottom: 0;">
+            [13] Johansson et al., "<a href="https://link.springer.com/article/10.3758/BF03212378" target="_blank">
+              Visual Perception of Biological Motion and a Model for its Analysis</a>", Perception & Psychophysics, 1973.
+            <a href="#ref13back">↩</a>
+          </p>
+          <p id="ref14" style="margin-bottom: 0;">
+            [14] Pan et al., "<a href="" target="_blank">
+              Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold</a>", SIGGRAPH, 2023.
+            <a href="#ref14back">↩</a>
+          </p>
+          <p id="ref15" style="margin-bottom: 0;">
+            [15] Shi et al., "<a href="https://yujun-shi.github.io/projects/dragdiffusion.html" target="_blank">
+              DragDiffusion: Harnessing Diffusion Models for Interactive Point-based Image Editing</a>", CVPR 2024.
+            <a href="#ref15back">↩</a>
+          </p>
+          <p id="ref16" style="margin-bottom: 0;">
+            [16] Mou et al., "<a href="" target="_blank">
+              DragonDiffusion: Enabling Drag-style Manipulation on Diffusion Models</a>", ICLR 2024.
+            <a href="#ref16back">↩</a>
+          </p>
+          <p id="ref17" style="margin-bottom: 0;">
+            [17] Geng et al., "<a href="https://dangeng.github.io/motion_guidance/" target="_blank">
+              Motion Guidance: Diffusion-Based Image Editing with Differentiable Motion Estimators</a>", ICLR 2024.
+            <a href="#ref17back">↩</a>
+          </p>
+          <p id="ref18" style="margin-bottom: 0;">
+            [18] AlZayer et al., "<a href="https://magic-fixup.github.io/" target="_blank">
+              Magic Fixup: Streamlining Photo Editing by Watching Dynamic Videos</a>", arXiv, 2024.
+            <a href="#ref18back">↩</a>
+          </p>
+          <p id="ref19" style="margin-bottom: 0;">
+            [19] Sand and Teller, "<a href="https://link.springer.com/article/10.1007/s11263-008-0136-6" target="_blank">
+              Particle Video: Long-Range Motion Estimation Using Point Trajectories</a>", IJCV 2008.
+            <a href="#ref19back">↩</a>
+          </p>
+          <p id="ref20" style="margin-bottom: 0;">
+            [20] Harley et al., "<a href="https://particle-video-revisited.github.io/" target="_blank">
+              Particle Video Revisited: Tracking Through Occlusions Using Point Trajectories</a>", ECCV 2022.
+            <a href="#ref20back">↩</a>
+          </p>
+          <p id="ref21" style="margin-bottom: 0;">
+            [21] Doersch et al., "<a href="https://tapvid.github.io/" target="_blank">
+              TAP-Vid: A Benchmark for Tracking Any Point in a Video</a>", NeurIPS 2022.
+            <a href="#ref21back">↩</a>
+          </p>
+          <p id="ref22" style="margin-bottom: 0;">
+            [22] Liu et al., "<a href="https://people.csail.mit.edu/celiu/motionmag/motionmag.html" target="_blank">
+              Motion Magnification</a>", SIGGRAPH 2005.
+            <a href="#ref22back">↩</a>
+          </p>
+          <p id="ref23" style="margin-bottom: 0;">
+            [23] Wu et al., "<a href="https://people.csail.mit.edu/mrub/evm/" target="_blank">
+              Eulerian Video Magnification for Revealing Subtle Changes in the World</a>", SIGGRAPH 2012.
+            <a href="#ref23back">↩</a>
+          </p>
+          <p id="ref24" style="margin-bottom: 0;">
+            [24] Wadhwa et al., "<a href="https://people.csail.mit.edu/nwadhwa/phase-video/" target="_blank">
+              Phase-based Video Motion Processing</a>", SIGGRAPH 2013.
+            <a href="#ref24back">↩</a>
+          </p>
+          <p id="ref25" style="margin-bottom: 0;">
+            [25] Rotstein et al., "<a href="https://arxiv.org/pdf/2411.16819" target="_blank">
+              Pathways on the Image Manifold: Image Editing via Video Generation</a>", arXiv, 2024.
+            <a href="#ref25back">↩</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
