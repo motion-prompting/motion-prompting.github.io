@@ -244,3 +244,16 @@ html {
   -webkit-text-fill-color: transparent; 
   -webkit-background-clip: text; 
 }
+
+
+
+
+/* Lazy loading */
+.lazy-video {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-video.loaded {
+  opacity: 1;
+}

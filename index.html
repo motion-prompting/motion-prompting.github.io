@@ -20,6 +20,7 @@
   <!--<link rel="icon" href="./static/images/favicon.svg">-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/index.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
 </head>
 <body>
@@ -410,86 +411,88 @@
 
     <!-- Videos -->
     <div class="columns is-multiline is-variable is-4">
-      <div class="column is-half" id="interact_smoke">
+
+      <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/smoke.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/smoke.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"smoke"</p>
         </div>
       </div>
-      <div class="column is-half" id="interact_pine">
+      <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/pine.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/pine.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"branches of a snowy pine tree"</p>
         </div>
       </div>
-      <div class="column is-half" id="interact_sand">
+      <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/sand.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/sand.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"sand"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/girlpearl.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/girlpearl.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"girl with a pearl earring"</p>
         </div>
       </div>
-      <div class="column is-half" id="interact_hair">
+      <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/hair.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/hair.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a woman"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/owl.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/owl.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of a great horned owl"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/klimt.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/klimt.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a portrait by gustav klimt"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/chess.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/chess.mp4" type="video/mp4">
           </video>
           <p class="text-prompt" style="font-size: 0.8rem;">"Close-up of a chessboard with strong depth of field. The white king piece is in focus, surrounded by black pawns"</p>
         </div>
       </div>
-      <div class="column is-half" id="interact_cow">
+      <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/cow_neck.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/cow_neck.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a dignified highland cow in scotland"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/interact/cow.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/interact/cow.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a dignified highland cow in scotland"</p>
         </div>
       </div>
+
     </div>
 
     <!-- Button to Gallery -->
@@ -519,8 +522,8 @@
     <div class="columns is-multiline is-variable is-4" style="padding-top: 1rem;">
       <div class="column is-full">
         <div class="has-text-centered rounded-border-video">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/depth_viz_fade.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/depth_viz_fade.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -555,38 +558,40 @@
       </div>
     </div>
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/dolly_rabbit.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/dolly_rabbit.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of a rabbit"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/dolly_squirrel.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/dolly_squirrel.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a squirrel sitting on the ground in the woods"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/dolly_sheep.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/dolly_sheep.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of two sheep side by side in a grassy field"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/dolly_lake.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/dolly_lake.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"rowboats on a placid aquamarine lake nestled in the swiss mountains"</p>
         </div>
       </div>
+
     </div>
 
     <!-- Arcing Videos -->
@@ -596,38 +601,40 @@
       </div>
     </div>
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/arc_skeletons.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/arc_skeletons.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a skeleton of a bird and an owl on a wooden table against a black background"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/arc_rose.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/arc_rose.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a red rose"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/arc_lake.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/arc_lake.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"rowboats on a placid aquamarine lake nestled in the swiss mountains"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/arc_camera.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/arc_camera.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of a camera on a map"</p>
         </div>
       </div>
+
     </div>
 
     <!-- Circle Videos -->
@@ -637,38 +644,40 @@
       </div>
     </div>
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/circle_sheep.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/circle_sheep.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of a sheep"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/circle_arches.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/circle_arches.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"arches in arches national park, with shrubbery in the foreground and a bright blue sky"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/circle_waterfall.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/circle_waterfall.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"waterfalls in a lush green forest, seen from a rocky shore"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/circle_elephant.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/circle_elephant.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"elephants"</p>
         </div>
       </div>
+
     </div>
 
     <!-- Mouse Depth Videos -->
@@ -678,22 +687,24 @@
       </div>
     </div>
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/mouse_rose.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/mouse_rose.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a rose"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/depth/mouse_teddy.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/depth/mouse_teddy.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a teddy bear"</p>
         </div>
       </div>
+
     </div>
 
     <!-- Button to Gallery -->
@@ -737,22 +748,24 @@
 
     <!-- Videos -->
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/primitives/cateye.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/primitives/cateye.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a closeup of the eye of a cat"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/primitives/cat.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/primitives/cat.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a cat"</p>
         </div>
       </div>
+
     </div>
 
     <!-- Description -->
@@ -767,22 +780,24 @@
     </div>
     <!-- Videos -->
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/primitives/frogeye.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/primitives/frogeye.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of a frog"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/primitives/frogeye_drag.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/primitives/frogeye_drag.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of a frog"</p>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -816,38 +831,40 @@
 
     <!-- Videos -->
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/composition/composition_golden.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/composition/composition_golden.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a golden retriever laying in the grass"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/composition/composition_horse.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/composition/composition_horse.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a horse"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/composition/composition_horse_2.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/composition/composition_horse_2.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a horse"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/composition/composition_sheep.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/composition/composition_sheep.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of two sheep side by side in a grassy field"</p>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -880,20 +897,22 @@
 
     <!-- Videos -->
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/transfer/man.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/transfer/man.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/transfer/earth.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/transfer/earth.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+
     </div>
 
     <!-- Description -->
@@ -920,34 +939,36 @@
     </div>
 
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/transfer/monkey.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/transfer/monkey.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/transfer/camel.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/transfer/camel.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/transfer/jello.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/transfer/jello.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/transfer/waterfall.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/transfer/waterfall.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+
     </div>
 
     <!-- Button to Gallery -->
@@ -1072,22 +1093,24 @@
 
     <!-- Videos -->
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/motionmag/twocats.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/motionmag/twocats.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"two cats"</p>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/motionmag/woman.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/motionmag/woman.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a woman"</p>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -1136,54 +1159,56 @@
 
     <!-- Videos -->
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/failures/fail_chess.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/failures/fail_chess.mp4" type="video/mp4">
           </video>
           <p class="text-prompt" style="font-size: 0.8rem;">"Close-up of a chessboard with strong depth of field. The white king piece is in focus, surrounded by black pawns"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/failures/fail_monkey.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/failures/fail_monkey.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of a snow monkey in a Japanese hot spring"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/failures/fail_lion.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/failures/fail_lion.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a lion"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/failures/fail_cow.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/failures/fail_cow.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a highland cow standing in a grassy scottish wilderness"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/failures/fail_vangogh.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/failures/fail_vangogh.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a van gogh self portrait"</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/failures/fail_sheep.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/failures/fail_sheep.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">"a close up of two sheep side by side in a grassy field"</p>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -1222,20 +1247,22 @@
     </div>
 
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-full" style="padding: 0;">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/text_sweep/parrot.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/text_sweep/parrot.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full" style="padding: 0;">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/text_sweep/pine.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/text_sweep/pine.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -1275,36 +1302,37 @@
     <div class="columns is-multiline is-variable is-4">
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/sparsity/teddy_n30.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/sparsity/teddy_n30.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">30 tracks</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/sparsity/teddy_n100.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/sparsity/teddy_n100.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">100 tracks</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/sparsity/teddy_n300.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/sparsity/teddy_n300.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">300 tracks</p>
         </div>
       </div>
       <div class="column is-half">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/sparsity/teddy_n1000.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/sparsity/teddy_n1000.mp4" type="video/mp4">
           </video>
           <p class="text-prompt">1000 tracks</p>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -1338,46 +1366,47 @@
     <div class="columns is-multiline is-variable is-4">
       <div class="column is-half" style="padding: 0;">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/comparison/cow.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/comparison/cow.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-half" style="padding: 0;">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/comparison/globe.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/comparison/globe.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-half" style="padding: 0;">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/comparison/sheep.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/comparison/sheep.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-half" style="padding: 0;">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/comparison/boat.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/comparison/boat.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-half" style="padding: 0;">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/comparison/parrot.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/comparison/parrot.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-half" style="padding: 0;">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/comparison/balloon.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/comparison/balloon.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -1417,69 +1446,71 @@
 
     <!-- Videos -->
     <div class="columns is-multiline is-variable is-4">
+
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/uncurated/sand.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/uncurated/sand.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/uncurated/smoke.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/uncurated/smoke.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/uncurated/raccoon.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/uncurated/raccoon.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/uncurated/bear.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/uncurated/bear.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/uncurated/lake.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/uncurated/lake.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/uncurated/elephants.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/uncurated/elephants.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/uncurated/squirrel.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/uncurated/squirrel.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/uncurated/golden.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/uncurated/golden.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="column is-full">
         <div class="has-text-centered">
-          <video poster="" autoplay muted loop playsinline>
-            <source src="./static/videos/uncurated/monkey.mp4" type="video/mp4">
+          <video class="lazy-video" poster="" muted loop playsinline>
+            <source data-src="./static/videos/uncurated/monkey.mp4" type="video/mp4">
           </video>
         </div>
       </div>
+
     </div>
 
   </div>
